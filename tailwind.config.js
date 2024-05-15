@@ -12,7 +12,18 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Open Sans"', 'sans-serif'],
+        serif: ['"Noto Serif"', 'serif'],
+      },
       colors: {
+        // custom colors 
+        veryDarkOrange: "hsl(8, 52%, 6%)",
+        darkOrange: "hsl(8, 50%, 24%)",
+        orange: "hsl(10, 78%, 54%)",
+        lightOrange: "hsl(10, 82%, 78%)",
+        darkBlue: "hsl(231, 51%, 21%)",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
