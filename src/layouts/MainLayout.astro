@@ -1,5 +1,10 @@
 ---
 import "@/styles/index.css";
+//const generator = Astro.generator;
+import { Image } from "astro:assets";
+import logo from "../images/possacodelogo.svg"
+import {AlignJustify} from "lucide-react"
+
 ---
 
 <html lang="en">
@@ -11,9 +16,10 @@ import "@/styles/index.css";
     <link rel="stylesheet" href="" />
     <title>Astro</title>
   </head>
-  <body>
-        <main>
-            <slot/>
-        </main>
+  <body class="">
+       <main>
+          <slot/>
+       </main>
+       
   </body>
 </html>

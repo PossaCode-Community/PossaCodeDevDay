@@ -20,7 +20,7 @@ module.exports = {
         // custom colors 
         veryDarkOrange: "hsl(8, 52%, 6%)",
         darkOrange: "hsl(8, 50%, 24%)",
-        orange: "hsl(10, 78%, 54%)",
+        primaryOrange: "hsl(10, 78%, 54%)",
         lightOrange: "hsl(10, 82%, 78%)",
         darkBlue: "hsl(231, 51%, 21%)",
 
@@ -63,6 +63,8 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
+      // Add the following animations
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

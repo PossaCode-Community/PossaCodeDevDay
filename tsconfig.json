@@ -1,13 +1,22 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+
+    //TypeScript  
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      // integration radix accordion paths
+      "@radix-ui/react-accordion": ["./node_modules/@radix-ui/react-accordion"]
     }
   }
 }
