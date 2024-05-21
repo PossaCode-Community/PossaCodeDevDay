@@ -18,7 +18,7 @@ export type SpeakerProps = {
 
 export const speakersData = [
     {
-        imageSrc: "https://plus.unsplash.com/premium_photo-1663099358462-bcacf22f97c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imageSrc: "/public/profile.png",
         name: "Zisnad Q. Alex",
         title: "Speaker",
         description: "Completely conceptual high quality nice markers rather than long term impact human capital.",
@@ -33,7 +33,7 @@ export const speakersData = [
         // Ajoutez d'autres intervenants ici
     },
     {
-        imageSrc: "https://plus.unsplash.com/premium_photo-1664367173362-593de24d940e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg",
+        imageSrc: "/public/profile.png",
         name: "Zisnad Q. Alex",
         title: "Speaker",
         description: "Completely conceptual high quality nice markers rather than long term impact human capital.",
@@ -48,7 +48,7 @@ export const speakersData = [
         // Ajoutez d'autres intervenants ici
     },
     {
-        imageSrc: "https://plus.unsplash.com/premium_photo-1664367173362-593de24d940e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg",
+        imageSrc: "https://aminurislam.com/labartisan/kagont/assets/images/speakers/02.png",
         name: "Zisnad Q. Alex",
         title: "Speaker",
         description: "Completely conceptual high quality nice markers rather than long term impact human capital.",
@@ -63,7 +63,7 @@ export const speakersData = [
         // Ajoutez d'autres intervenants ici
     },
     {
-        imageSrc: "https://plus.unsplash.com/premium_photo-1664367173362-593de24d940e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg",
+        imageSrc: "/public/04.png",
         name: "Zisnad Q. Alex",
         title: "Speaker",
         description: "Completely conceptual high quality nice markers rather than long term impact human capital.",
@@ -76,5 +76,6 @@ export const speakersData = [
             href: "https://twitter.com/zisnad",
         }] 
         // Ajoutez d'autres intervenants ici
-    }
+    },
+        // Ajoutez d'autres intervenants ici
 ]
