@@ -1,0 +1,100 @@
+---
+import hero from "../../images/image-4.png";
+import { Image } from "astro:assets";
+---
+
+<section class="relative">
+  <div
+    class="absolute infinite-slide -z-20 bg-[url('../../images/hero-bg.png')] bg-no-repeat bg-cover bg-center inset-0 object-cover w-full h-full filter blur-sm"
+  >
+  </div>
+  <!-- <div class="absolute -z-10 inset-0 bg-black bg-opacity-50"></div> -->
+  <div class="py-28 bg-gradient-to-r from-blue-950/75 to-blue-900/75 h-full">
+    <div class="container max-w-7xl flex flex-col gap-16 lg:flex-row">
+      <div
+        class="text-center font-serif max-w-xl mx-auto lg:text-left lg:w-1/2"
+      >
+        <div class="flex justify-center">
+          <ul class="grid grid-cols-4 gap-3 mb-12 md:min-w-96">
+            <li class="countDown-wrapper">
+              <span id="jour" class="countDown-number">0</span>
+              <span class="countDown-text">Jours</span>
+            </li>
+            <li class="countDown-wrapper">
+              <span id="heure" class="countDown-number">0</span>
+              <span class="countDown-text">Heures</span>
+            </li>
+            <li class="countDown-wrapper">
+              <span id="minute" class="countDown-number">0</span>
+              <span class="countDown-text">Min</span>
+            </li>
+            <li class="countDown-wrapper">
+              <span id="seconde" class="countDown-number">0</span>
+              <span class="countDown-text">Sec</span>
+            </li>
+          </ul>
+        </div>
+
+        <h1
+          class="text-5xl text-gray-100 font-bold italic text-shadow-sm mb-10"
+        >
+          PossaCode Dev Day 2024
+        </h1>
+        <p class="text-xl text-gray-100 font-medium mb-9">
+          Le plus grand rendez-vous des développeurs pour les développeurs au
+          Congo Brazzaville
+        </p>
+
+        <div class="flex justify-center lg:justify-start">
+          <button
+            type="button"
+            class="py-3 px-5 bg-white text-primaryOrange transition-all rounded-md shadow-customShadow hover:shadow-none md:block"
+          >
+            <a href="#" class="w-full text-xl font-bold"> S'Inscrire </a>
+          </button>
+        </div>
+      </div>
+      <div class="">
+        <Image
+          src={hero}
+          alt="hero banner"
+          class="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const dateCible = new Date("2024-07-19");
+  let jour = document.getElementById("jour");
+  let heure = document.getElementById("heure");
+  let minute = document.getElementById("minute");
+  let seconde = document.getElementById("seconde");
+
+  function countDown() {
+    const nextDate = new Date(dateCible);
+    const now = new Date();
+    const difference = nextDate - now;
+    const secondes = Math.floor(difference / 1000);
+
+    // Calculer les jours, heures, minutes, secondes
+    const jours = Math.floor(secondes / 3600 / 24);
+    const heures = Math.floor(secondes / 3600) % 24;
+    const minutes = Math.floor(secondes / 60) % 60;
+    const secondesRestant = Math.floor(secondes) % 60;
+    console.log(jours);
+
+    jour.innerHTML = jours.toString();
+    heure.innerHTML = heures.toString();
+    minute.innerHTML = minutes.toString();
+    seconde.innerHTML = secondesRestant.toString();
+  }
+
+  countDown();
+  setInterval(() => {
+    countDown();
+  }, 1000);
+
+  // const result = countDown(dateCible);
+</script>
