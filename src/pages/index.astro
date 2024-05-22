@@ -1,6 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-<<<<<<< HEAD
+import {AccordionDemo} from "../components/accordionSection.tsx";
+import {Speakers} from "../components/speackers";
 import { Image } from "astro:assets";
 import { MapPin } from "lucide-react";
 import { CalendarDays } from "lucide-react";
@@ -90,18 +91,7 @@ import Hero from "@/components/ui/Hero.astro";
         </div>
       </div>
     </div>
-  </section>
-=======
-import {AccordionDemo} from "../components/accordionSection.tsx";
-import {Speakers} from "../components/speackers";
-
----
-
-<MainLayout>
-  <AccordionDemo client:load/>
-  <section class="container mx-auto">
+    <AccordionDemo client:load/>
     <Speakers/>
   </section>
- 
->>>>>>> feature/accordionFeature
-</MainLayout>
+
