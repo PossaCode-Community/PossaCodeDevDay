@@ -1,5 +1,10 @@
 ---
 import "@/styles/index.css";
+import { AlignJustify } from "lucide-react";
+import { X } from "lucide-react";
+import { Image } from "astro:assets";
+import logo from "../images/possacodelogo.svg";
+import Navbar from "@/components/ui/Navbar";
 ---
 
 <html lang="en">
@@ -11,11 +16,12 @@ import "@/styles/index.css";
     <link rel="stylesheet" href="" />
     <title>Astro</title>
   </head>
-  <body>
-        <header class="bg-red-500">Lorem ipsum dolor,</header>
-        <main>
-            <slot/>
-        </main>
-        <footer class="bg-gray-600">Lorem ipsum dolor,</footer>
+  <body class="bg-darkBlue">
+    <header class="py-5 px-5 bg-darkBlue shadow-headerShadow">
+      <Navbar client:load />
+    </header>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>

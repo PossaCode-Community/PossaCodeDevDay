@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   prefix: "",
   theme: {
     container: {
@@ -12,7 +12,29 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Open Sans"', "sans-serif"],
+        serif: ['"Noto Serif"', "serif"],
+      },
+      boxShadow: {
+        customShadow: "4px 4px 0 0 hsl(10, 78%, 54%)",
+        headerShadow: "0 4px 20px 0 rgba(0, 0, 0, 0.2)",
+        textShadow: "2px 2px 0 hsl(10, 78%, 54%)",
+      },
+      textShadow: {
+        sm: "3px 3px 0 hsl(10, 78%, 54%)",
+        light: "3px 3px 0 hsl(10, 82%, 78%)",
+      },
+
       colors: {
+        // custom colors
+        veryDarkOrange: "hsl(8, 52%, 6%)",
+        darkOrange: "hsl(8, 50%, 24%)",
+        primaryOrange: "hsl(10, 78%, 54%)",
+        lightOrange: "hsl(10, 82%, 78%)",
+        darkBlue: "hsl(231, 51%, 21%)",
+        veryDarkBlue: "#00163f4d",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -68,5 +90,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-}
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-textshadow")],
+};
