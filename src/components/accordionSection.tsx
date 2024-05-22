@@ -232,7 +232,7 @@ export function AccordionDemo() {
                 <AccordionContent>
                   <div className="flex  flex-col flex-wrap items-center space-y-4 gap-x-24 md:pl-52">
                     <p className="text-gray-500">{item.content.title}</p>
-                    <div className="flex -space-x-4 ">
+                    <div className="flex -space-x-4 pl-0 -ml-4">
                       {item.content.speakers.map((speaker, speakerIndex) => (
                         <div
                           key={speakerIndex}
@@ -242,7 +242,7 @@ export function AccordionDemo() {
                             src={speaker.photo}
                             alt={speaker.name}
                             className="size-14 rounded-full object-cover border-2 border-white group-hover:scale-150 transition-transform duration-300"
-                          />                    
+                          /> 
                         </div>
                       ))}
                     </div>
