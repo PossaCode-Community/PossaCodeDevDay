@@ -1,21 +1,18 @@
 ---
 import "@/styles/index.css";
-import { AlignJustify } from "lucide-react";
-import { X } from "lucide-react";
-import { Image } from "astro:assets";
-import logo from "../images/possacodelogo.svg";
 import Navbar from "@/components/ui/Navbar";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="" />
     <title>Astro</title>
   </head>
+
   <body class="bg-darkBlue">
     <header class="py-5 px-5 bg-darkBlue shadow-headerShadow">
       <Navbar client:load />
@@ -23,5 +20,6 @@ import Navbar from "@/components/ui/Navbar";
     <main>
       <slot />
     </main>
+
   </body>
 </html>

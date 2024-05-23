@@ -74,6 +74,8 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
+      // Add the following animations
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
