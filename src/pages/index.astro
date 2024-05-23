@@ -1,7 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import {AccordionDemo} from "../components/accordionSection.tsx";
-import {Speakers} from "../components/speackers";
+import { AccordionDemo } from "../components/accordionSection.tsx";
+import { Speakers } from "../components/speackers";
 import { Image } from "astro:assets";
 import { MapPin } from "lucide-react";
 import { CalendarDays } from "lucide-react";
@@ -91,7 +91,13 @@ import Hero from "@/components/ui/Hero.astro";
         </div>
       </div>
     </div>
-    <AccordionDemo client:load/>
-    <Speakers/>
   </section>
-
+  <section class="py-28">
+    <Speakers />
+  </section>
+  <section class="py-28 bg-white">
+    <AccordionDemo client:load />
+  </section>
+ 
+  </MainLayout
+>

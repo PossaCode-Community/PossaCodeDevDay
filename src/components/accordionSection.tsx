@@ -126,7 +126,7 @@ const events: Event[] = [
             {
               name: "Fiona Harris",
               photo:
-                "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
           ],
 
@@ -141,8 +141,7 @@ const events: Event[] = [
     localisation: "Summer C",
     items: [
       {
-        imgSrc:
-          "/public/profile.png",
+        imgSrc:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title: "DIGITAL CONFERENCE INTRODUCTION",
         content: {
           title: "Ubi est nobilis cobaltum? Domesticus capios ducunt ad demissio. Torquiss favere, tanquam bassus glos. Vae, hippotoxota! Superbus, mirabilis poetas vix aperto de teres, germanus amicitia. Vae. Fortis nixs ducunt ad acipenser. A falsis, musa nobilis gabalium. Cum decor ire, omnes fraticinidaes",
@@ -195,12 +194,12 @@ const events: Event[] = [
 ];
 export function AccordionDemo() {
   return (
-    <div className="container grid grid-cols-1 md:grid-rows-2 mx-auto gap-x-12 md:flex">
+    <div className="container  grid grid-cols-1 gap-10 lg:grid-cols-2">
       {/* // Automatisation de l'accordion */}
       {events.map((event, eventIndex) => (
-        <div className="w-full " key={eventIndex}>
+        <div className="w-full border-2 border-black " key={eventIndex}>
           <div className="">
-            <h1 className="font-bold text-2xl py-8 text-center">
+            <h1 className="font-bold text-3xl py-8 text-center">
               {event.date}
             </h1>
           </div>
@@ -209,19 +208,19 @@ export function AccordionDemo() {
               <AccordionItem key={itemIndex} value={`item-${itemIndex}`}>
                 {/* // image principal */}
                 <AccordionTrigger>
-                  <div className="flex flex-col gap-x-24 items-center md:flex-row">
+                  <div className="flex flex-col gap-12 items-center md:flex-row">
                     <img
                       src={item.imgSrc}
                       alt="event"
                       className="size-28 rounded-full border-spacing-4 object-cover items-start"
                     />
-                    <div className="flex flex-col items-start space-y-4">
-                      <p className="text-red-700">{event.hour}</p>{" "}
+                    <div className="flex flex-col items-start space-y-2 text-left">
+                      <p className="text-red-700 tracking-widest uppercase text-base font-serif font-semibold">{event.hour}</p>{" "}
                       {/* Utiliser event.hour pour automatiser */}
-                      <h1 className="">{item.title}</h1>
-                      <p className="text-gray-500">
+                      <h1 className="text-xl font-bold font-serif">{item.title}</h1>
+                      <p className="text-gray-500 text-base">
                         by
-                        <span className="text-yellow-600"> Jessica Brown</span> -
+                        <span className=" text-darkBlue"> Jessica Brown</span> -
                         Co Founder
                       </p>
                     </div>
