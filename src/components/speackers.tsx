@@ -34,8 +34,9 @@ export const Speaker = ({
           />
         </div>
       </div>
+      
       <div className=" flex flex-col gap-2 items-center justify-center md:w-1/2 md:items-start ">
-        <span className="text-2xl font-serif font-bold group-hover:text-blue-500 transition-all duration-300 ">
+        <span className="text-2xl font-serif font-bold text-white group-hover:text-blue-500 transition-all duration-300 ">
           {name}
         </span>
         <p className="text-lg text-gray-100 font-sans font-semibold">{title}</p>
