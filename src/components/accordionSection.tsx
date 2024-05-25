@@ -199,7 +199,7 @@ export function AccordionDemo() {
     itemIndex: number;
   } | null>(null);
 
-  const handleClick =(eventIndex, itemIndex)=>{
+  const handleClick =(eventIndex:number, itemIndex:number)=>{
 
     {
       if (
@@ -218,7 +218,7 @@ export function AccordionDemo() {
     <div className="container grid grid-cols-1 gap-10 lg:grid-cols-2">
       {/* // Automatisation de l'accordion */}
       {events.map((event, eventIndex) => (
-        <div className="w-full" key={eventIndex}>
+        <div className="w-full border-black" key={eventIndex}>
           <div className="">
             <h1 className="font-bold text-3xl py-8 text-center">
               {event.date}
