@@ -9,34 +9,13 @@ import salon from "../images/salon.jpg";
 import conf from "../images/conference.jpg";
 import hackathon from "../images/hackathon.webp";
 import hack2 from "../images/hackathon_2.jpeg";
-
+import Stat from "@/components/Stat.astro";
 import Hero from "@/components/ui/Hero.astro";
 ---
 
 <MainLayout>
   <Hero />
-  <section class="py-4 bg-gray-950">
-    <div class="container">
-      <div
-        class="space-y-4 md:grid md:space-y-0 md:grid-cols-3 md:justify-around"
-      >
-        <div class="numberStat">
-          <span class="text-5xl">20+</span>
-          <h4 class="text-primaryOrange">Conférences</h4>
-        </div>
-
-        <div class="numberStat">
-          <span class="text-5xl">20+</span>
-          <h4 class="text-primaryOrange">Exposants</h4>
-        </div>
-
-        <div class="numberStat border-none">
-          <span class="text-5xl">50+</span>
-          <h4 class="text-primaryOrange">Développeurs</h4>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Stat />
   <section class="py-28 bg-white">
     <div class="container flex flex-col gap-9 md:flex-row">
       <div class="md:w-1/2">
@@ -98,6 +77,4 @@ import Hero from "@/components/ui/Hero.astro";
   <section class="py-28 bg-white">
     <AccordionDemo client:load />
   </section>
- 
-  </MainLayout
->
+</MainLayout>
