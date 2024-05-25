@@ -178,7 +178,7 @@ const events: Event[] = [
             },
             {
               name: "Charlie Davis",
-              photo: "/public/profile.png",
+              photo: "/profile.png",
             },
             {
               name: "Fiona Harris",
@@ -199,8 +199,7 @@ export function AccordionDemo() {
     itemIndex: number;
   } | null>(null);
 
-  const handleClick =(eventIndex:number, itemIndex:number)=>{
-
+  const handleClick = (eventIndex: number, itemIndex: number) => {
     {
       if (
         focusedItem &&
@@ -212,7 +211,7 @@ export function AccordionDemo() {
         setFocusedItem({ eventIndex, itemIndex }); // Sinon, mettre à jour le focus
       }
     }
-  }
+  };
 
   return (
     <div className="container grid grid-cols-1 gap-10 lg:grid-cols-2">
@@ -236,7 +235,7 @@ export function AccordionDemo() {
                     />
                     <div
                       className={`flex flex-col items-start space-y-2 text-left  py-8 px-10  ${focusedItem && focusedItem.eventIndex === eventIndex && focusedItem.itemIndex === itemIndex ? "bg-slate-100" : ""}`}
-                      onClick={()=>handleClick(eventIndex, itemIndex)}
+                      onClick={() => handleClick(eventIndex, itemIndex)}
                     >
                       <p className="text-red-700 tracking-widest uppercase text-base font-serif font-semibold">
                         {event.hour}
