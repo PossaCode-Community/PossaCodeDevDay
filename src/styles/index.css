@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.link-hover {
+  @apply hover:text-primaryOrange;
+}
+
 .countDown-wrapper {
   @apply flex flex-col rounded-3xl;
 }
@@ -20,20 +24,33 @@
   @apply max-w-md mx-auto space-y-2 p-4 border-b-2 border-primaryOrange text-xl text-lightOrange text-center font-serif font-semibold md:max-w-none md:mx-0 md:border-b-0 md:border-r-4;
 }
 
-@layer components {
-  .infinite-slide {
-    animation: infiniteSlide 10s alternate infinite;
+.infinite-slide {
+  animation: infiniteSlide 10s alternate infinite;
+}
+
+@keyframes infiniteSlide {
+  0% {
+    @apply bg-[url('../images/hero-bg.png')];
   }
-  @keyframes infiniteSlide {
-    0% {
-      @apply bg-[url('../images/hero-bg.png')];
-    }
-    50% {
-      @apply bg-[url('../images/hero-bg-2.png')];
-    }
-    100% {
-      @apply bg-[url('../images/hero-bg.png')];
-    }
+  50% {
+    @apply bg-[url('../images/hero-bg-2.png')];
+  }
+  100% {
+    @apply bg-[url('../images/hero-bg.png')];
+  }
+}
+
+.sticky {
+  @apply fixed top-0 w-full;
+  animation: fadeInDown 0.7s ease-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    @apply opacity-0 -translate-y-[96px];
+  }
+  100% {
+    @apply opacity-100 translate-y-0;
   }
 }
 
