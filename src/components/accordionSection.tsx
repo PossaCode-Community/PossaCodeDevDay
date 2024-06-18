@@ -6,6 +6,8 @@ import {
 } from "@/components/ui/accordion";
 import { useState } from "react";
 
+import {AnimatedTooltipPreview} from "@/components/exemple"
+
 // Define the types for event items and events
 interface Speaker {
   id:number;
@@ -20,7 +22,7 @@ interface EventContent {
 }
 
 interface EventItem {
-  imgSrc: string;
+  //imgSrc: string;
   title: string;
   content: EventContent;
 }
@@ -40,8 +42,6 @@ const events: Event[] = [
     localisation: "Summer C",
     items: [
       {
-        imgSrc:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title: "DIGITAL CONFERENCE INTRODUCTION",
         content: {
           title:
@@ -205,11 +205,7 @@ export function AccordionDemo() {
               <AccordionItem key={itemIndex} value={`item-${itemIndex}`}>
                 <AccordionTrigger className="">
                   <div className="flex flex-col gap-12 items-center  md:flex-row ">
-                    <img
-                      src={item.imgSrc}
-                      alt="event"
-                      className="size-28 rounded-full border-spacing-4 object-cover items-start"
-                    />
+                    
                     <div
                       className={`flex flex-col items-start space-y-2 text-left  py-8 px-10  ${focusedItem && focusedItem.eventIndex === eventIndex && focusedItem.itemIndex === itemIndex ? "bg-slate-100" : ""}`}
                       onClick={()=>handleClick(eventIndex, itemIndex)}
@@ -232,12 +228,13 @@ export function AccordionDemo() {
 
                 {/*  // contenu de de l'evenement  */}
                 <AccordionContent>
-                  <div className="flex flex-col space-y-4 md:pl-40">
+                  <div className="flex flex-col space-y-4 md:pl-10">
                     <div>
                       <p className="text-gray-500 mb-4">{item.content.title}</p>
                     </div>
                     <div className="flex flex-wrap  -space-x-4 ">
-                      {item.content.speakers.map((speaker, speakerIndex) => (
+                      <AnimatedTooltipPreview />
+                     {/*  {item.content.speakers.map((speaker, speakerIndex) => (
                         <div
                           key={speakerIndex}
                           className="relative group hover:z-20 transition-transform duration-300"
@@ -248,7 +245,8 @@ export function AccordionDemo() {
                             className="w-14 h-14 rounded-full object-cover border-2 border-white group-hover:scale-150 transition-transform duration-300"
                           />
                         </div>
-                      ))}
+                      ))} */}
+                      
                     </div>
                   </div>
                 </AccordionContent>
@@ -258,6 +256,8 @@ export function AccordionDemo() {
           </Accordion>
         </div>
       ))}
+
+     
     </div>
   );
 }
