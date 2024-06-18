@@ -217,11 +217,6 @@ export function AccordionDemo() {
                       <h1 className="text-xl font-bold font-serif">
                         {item.title}
                       </h1>
-                      <p className="text-gray-500 text-base">
-                        by
-                        <span className=" text-darkBlue"> Jessica Brown</span> -
-                        Co Founder
-                      </p>
                     </div>
                   </div>
                 </AccordionTrigger>
@@ -232,21 +227,8 @@ export function AccordionDemo() {
                     <div>
                       <p className="text-gray-500 mb-4">{item.content.title}</p>
                     </div>
-                    <div className="flex flex-wrap  -space-x-4 ">
+                    <div className="flex flex-wrap">
                       <AnimatedTooltipPreview />
-                     {/*  {item.content.speakers.map((speaker, speakerIndex) => (
-                        <div
-                          key={speakerIndex}
-                          className="relative group hover:z-20 transition-transform duration-300"
-                        >
-                          <img
-                            src={speaker.photo}
-                            alt={speaker.name}
-                            className="w-14 h-14 rounded-full object-cover border-2 border-white group-hover:scale-150 transition-transform duration-300"
-                          />
-                        </div>
-                      ))} */}
-                      
                     </div>
                   </div>
                 </AccordionContent>
