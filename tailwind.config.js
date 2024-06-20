@@ -30,6 +30,10 @@ module.exports = {
         light: "3px 3px 0 hsl(10, 82%, 78%)",
       },
 
+      // gridTemplateColumns:{
+      //   custom:
+      // },
+
       colors: {
         // custom colors
         veryDarkOrange: "hsl(8, 52%, 6%)",

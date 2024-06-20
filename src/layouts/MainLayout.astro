@@ -6,10 +6,13 @@ import Navbar from "@/components/ui/Navbar";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="PossaCode DevDay est une conférence majeur dédié ) la communauté des dévéloppeur au Congo Brazzaville"
+    />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="" />
     <title>Astro</title>
   </head>
 
@@ -17,9 +20,8 @@ import Navbar from "@/components/ui/Navbar";
     <header class="">
       <Navbar client:load />
     </header>
-    <main>
+    <main class="mt-20">
       <slot />
     </main>
-
   </body>
 </html>

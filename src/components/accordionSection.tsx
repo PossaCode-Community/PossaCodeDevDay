@@ -157,16 +157,9 @@ const events: Event[] = [
               id: 6,
               name: "Jane Smith",
               designation: "Software Engineer",
-              photo:
-                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             },
-            {
-              id: 7,
-              name: "Jane Smith",
-              designation: "Software Engineer",
-              photo:
-                "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            },
+         
           ],
         },
         
@@ -187,8 +180,7 @@ export function AccordionDemo() {
     itemIndex: number;
   } | null>(null);
 
-  const handleClick =(eventIndex:number, itemIndex:number)=>{
-
+  const handleClick = (eventIndex: number, itemIndex: number) => {
     {
       if (
         focusedItem &&
@@ -200,7 +192,7 @@ export function AccordionDemo() {
         setFocusedItem({ eventIndex, itemIndex }); // Sinon, mettre à jour le focus
       }
     }
-  }
+  };
 
   return (
     <div className="container grid grid-cols-1 gap-10 lg:grid-cols-2">
@@ -219,8 +211,9 @@ export function AccordionDemo() {
                 <AccordionTrigger className="">
                   <div className="flex flex-col gap-12 items-center md:flex-row">
                     <div
-                      className={`flex flex-col  space-y-2 text-left  py-8 px-10  ${focusedItem && focusedItem.eventIndex === eventIndex && focusedItem.itemIndex === itemIndex ? "bg-slate-100" : ""}`}
-                      onClick={()=>handleClick(eventIndex, itemIndex)}
+
+                      className={`flex flex-col items-start space-y-2 text-left  py-8 px-10  ${focusedItem && focusedItem.eventIndex === eventIndex && focusedItem.itemIndex === itemIndex ? "bg-slate-100" : ""}`}
+                      onClick={() => handleClick(eventIndex, itemIndex)}
                     >
                       <p className="text-red-700 tracking-widest uppercase text-base font-serif font-semibold">
                         {event.hour}
