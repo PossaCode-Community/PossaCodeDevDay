@@ -1,4 +1,6 @@
-
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -111,5 +113,17 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwindcss-textshadow"),require("tailwindcss/lib/util/flattenColorPalette")],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-textshadow"),require("tailwindcss/lib/util/flattenColorPalette"),addVariablesForColors],
 };
+
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
