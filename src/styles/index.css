@@ -24,8 +24,28 @@
   @apply max-w-md mx-auto space-y-2 p-4 border-b-2 border-primaryOrange text-xl text-lightOrange text-center font-serif font-semibold md:max-w-none md:mx-0 md:border-b-0 md:border-r-4;
 }
 
+.label_form {
+  @apply block text-gray-900 mb-1 font-medium;
+}
+
+.input_form {
+  @apply block text-lg text-gray-800 font-medium outline-none border-b-2 border-gray-700 bg-gray-100 w-full font-sans py-1 pl-2 focus:border-primaryOrange;
+}
+
+.input_select {
+  @apply block w-full bg-gray-50 py-2 rounded-sm border border-gray-300 focus:border-2 focus:border-primaryOrange focus-visible:border-primaryOrange;
+}
+
 .infinite-slide {
   animation: infiniteSlide 10s alternate infinite;
+}
+
+.dot {
+  @apply block size-3 bg-gray-50 cursor-pointer rounded-full transition-all;
+}
+
+.active-dot {
+  @apply w-6 bg-black rounded-xl;
 }
 
 @keyframes infiniteSlide {
@@ -40,7 +60,7 @@
   }
 }
 
-.sticky {
+.nav_sticky {
   @apply fixed top-0 w-full;
   animation: fadeInDown 0.7s ease-out;
 }
