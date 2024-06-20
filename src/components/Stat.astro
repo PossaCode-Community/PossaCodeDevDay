@@ -1,8 +1,7 @@
 <section class="py-4 bg-white" data-container>
   <div class="container border-b-4 border-lightOrange">
     <div
-      class="space-y-4 pb-5 md:grid md:space-y-0 md:grid-cols-3 md:justify-around"
-    >
+      class="space-y-4 pb-5 md:grid md:space-y-0 md:grid-cols-3 md:justify-around">
       <div class="numberStat">
         <span class="text-5xl" data-count="20">20+</span>
         <h4 class="text-primaryOrange">Conférences</h4>
@@ -22,8 +21,12 @@
 </section>
 
 <script>
-  const counters = document.querySelectorAll("[data-container] span");
-  const container = document.querySelector("[data-container");
+  const counters = [
+    ...document.querySelectorAll("[data-container] span"),
+  ] as HTMLSpanElement[];
+  const container = document.querySelector(
+    "[data-container]"
+  ) as HTMLDivElement;
 
   let activated = false;
 
@@ -33,15 +36,17 @@
       activated === false
     ) {
       counters.forEach((counter) => {
-        counter.innerText = 0;
+        counter.innerText = `${0}`;
         let count = 0;
 
         function updateCount() {
+          if (!counter.dataset.count) return;
+
           const target = parseInt(counter.dataset.count);
 
           if (count < target) {
             count++;
-            counter.innerText = count;
+            counter.innerText = `${count}`;
             setTimeout(updateCount, 20);
           } else {
             counter.innerText = target + "+";
@@ -55,7 +60,7 @@
       (scrollY === 0 && activated === true)
     ) {
       counters.forEach((counter) => {
-        counter.innerText = 0;
+        counter.innerText = `${0}`;
       });
 
       activated = false;
