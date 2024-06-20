@@ -23,8 +23,8 @@ export const Speaker = ({
 }: SpeakerProps) => {
   return (
     <div className="flex flex-col py-8 space-y-8 items-center  lg:w-1/2  md:flex-row md:space-x-12  group">
-      <div className="relative flex flex-col items-center ">
-        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-b from-primaryOrange to-transparent rounded-full w-60 h-60 md:w-72 md:h-72 z-0 opacity-75"></div>
+      <div className="relative flex flex-col items-center  ">
+        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-b from-primaryOrange to-transparent rounded-full w-80 h-80 md:w-72 md:h-72 z-0 opacity-75"></div>
         <div className="relative">
           <img
             src={imageSrc}
@@ -46,7 +46,7 @@ export const Speaker = ({
               <a
                 href={socialLink.href}
                 target="_blank"
-                className="transition-colors  text-gray-100 hover:text-blue-500  duration-300"
+                className="transition-colors  text-gray-100 hover:text-primaryOrange duration-300"
               >
                 {<socialLink.icon />}
               </a>
