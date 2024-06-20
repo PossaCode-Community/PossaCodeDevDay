@@ -13,9 +13,11 @@ import Stat from "@/components/Stat.astro";
 import Hero from "@/components/ui/Hero.astro";
 //import {AnimatedTooltipPreview} from "@/components/exemple";
 import {MarqueeDemo} from "@/components/exempleMaguic";
+import { TracingBeam } from "@/components/ui/tracing-beam"
 ---
 
 <MainLayout>
+
   <Hero />
   <Stat />
   <section class="py-28 bg-white">
@@ -76,8 +78,12 @@ import {MarqueeDemo} from "@/components/exempleMaguic";
   <section class="py-28">
     <Speakers />
   </section>
-  <section class="py-40 bg-white">
-    <AccordionDemo client:visible />
-  </section>
+  <TracingBeam>
+    <section class="py-40 bg-white">
+      <AccordionDemo client:visible />
+    </section>
+  </TracingBeam>
   <MarqueeDemo client:visible  />
+
 </MainLayout>
+
